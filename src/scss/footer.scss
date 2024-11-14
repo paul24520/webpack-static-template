@@ -1,0 +1,33 @@
+.footer {
+  padding-top: 16px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #7e7e82;
+  &__item {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 80px 24px 41px 24px;
+    flex-direction: row;
+    color: #7e7e82;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+  }
+  .footer__item-1 {
+    text-align: left;
+    display: block;
+    max-width: 218px;
+    height: 32px;
+  }
+  .footer__item-3 {
+    text-align: right;
+    display: block;
+    max-width: 213px;
+    height: 48px;
+  }
+}

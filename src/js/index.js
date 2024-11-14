@@ -1,3 +1,9 @@
 import '../scss/style.scss'
-
-console.log('Works!')
+import '../scss/remont.scss'
+import './swiper'
+import '../scss/price.scss'
+import '../scss/footer.scss'
+import '../scss/form.scss'
+import './form'
+import './aside'
+import './expend'

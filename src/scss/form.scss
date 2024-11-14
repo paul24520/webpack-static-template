@@ -1,0 +1,102 @@
+.feedback,
+.order-call {
+  display: none;
+  position: fixed;
+  background: white;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 5;
+  padding: 24px 16px 75px 16px;
+  .form__title {
+    padding-top: 40px;
+    font-family: 'TT Lakes Bold';
+    font-size: 28px;
+    position: relative;
+    padding-bottom: 24px;
+    &::before {
+      content: '';
+      position: absolute;
+      border-radius: 8px;
+      left: -20px;
+      top: 32px;
+      width: 8px;
+      height: 40px;
+      background: #41f6d7;
+    }
+  }
+
+  .form {
+    flex-direction: column;
+    display: flex;
+    gap: 16px;
+    &__username,
+    &__phone,
+    &__mail {
+      align-self: center;
+      width: 288px;
+      height: 48px;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      font-family: 'TT Lakes Regular';
+      padding: 12px 16px;
+      &::placeholder {
+        padding: 12px 0px;
+      }
+    }
+    &__message {
+      border: 1px solid #eaeaea;
+      width: 288px;
+      height: 118px;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      font-family: 'TT Lakes Regular';
+      padding: 12px 16px;
+    }
+    &__agreement {
+      padding: 0 16px;
+      font-weight: 16px;
+      width: 288px;
+      margin-bottom: 10px;
+    }
+
+    &__confidentiality,
+    &__personal-date {
+      color: #ff3e79;
+    }
+    &__btn {
+      width: 136px;
+      height: 32px;
+      align-self: flex-end;
+    }
+  }
+  @media (min-width: 1440px) {
+    & {
+      .form {
+        &__username,
+        &__phone,
+        &__mail,
+        &__message,
+        &__agreement {
+          width: 376px;
+        }
+      }
+    }
+    .action-button {
+      position: absolute;
+      left: -60px;
+    }
+  }
+}
+.blur,
+.blur-aside {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  z-index: 4;
+  filter: grayscale(80%);
+}

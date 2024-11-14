@@ -1,0 +1,134 @@
+.remonts {
+  &__main {
+    height: 250px;
+    background-color: #f8f8f8;
+    padding: 0 16px;
+  }
+  &__list {
+    &--visible {
+      height: auto;
+      overflow: visible;
+    }
+    display: flex;
+    min-width: 0;
+    height: 72px;
+    &-item {
+      width: 240px;
+      padding-top: 16px;
+      height: 160px;
+    }
+  }
+  &__expend {
+    display: none;
+    &-text-rotate::before {
+      transform: rotate(180deg);
+      transition: all 0.5s;
+      bottom: 24px;
+    }
+  }
+}
+.remont {
+  padding: 16px 14px;
+  width: 240px;
+  height: 160px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  display: flex;
+  box-sizing: border-box;
+  &::before {
+    content: '';
+    right: 14px;
+    bottom: 34px;
+    position: absolute;
+    width: 18px;
+    height: 12px;
+    background: url(../img/arrow.svg) no-repeat;
+  }
+  &::after {
+    content: '';
+    right: 10px;
+    bottom: 20px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 2px #ff3e79;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper {
+    width: auto;
+    height: auto;
+    &-pagination {
+      display: none;
+    }
+  }
+  .remont {
+    width: 100%;
+    height: 160px;
+  }
+  .remonts {
+    &__main {
+      height: auto;
+      position: relative;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px 24px;
+      height: 180px;
+      overflow: hidden;
+      &--visible {
+        height: auto;
+        overflow: visible;
+      }
+      &-item {
+        width: 100%;
+      }
+    }
+    &__expend {
+      display: block;
+      padding: 24px 0;
+      &-button {
+        border: none;
+        background-color: #f8f8f8;
+        font-family: 'TT Lakes Regular';
+        font-weight: bold;
+        cursor: pointer;
+        align-items: center;
+      }
+      &-text {
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 16px;
+        &::before {
+          content: '';
+          bottom: 30px;
+          left: 12px;
+          position: absolute;
+          background: url(../img/expenddown.svg);
+          width: 20px;
+          height: 20px;
+          transition: all 0.5s;
+        }
+        &-rotate::before {
+          transform: rotate(180deg);
+          transition: all 0.5s;
+          bottom: 24px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1120px) {
+  .remonts__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px 32px;
+  }
+  .remonts__expend {
+    display: flex;
+  }
+}
