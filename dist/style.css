@@ -765,7 +765,7 @@ body {
 
 
 .remonts__main {
-  height: 250px;
+  height: 230px;
   background-color: #f8f8f8;
   padding: 0 16px; }
 
@@ -879,7 +879,7 @@ body {
   background-color: #f8f8f8; }
   .prices__main {
     padding-top: 16px;
-    height: 240px; }
+    height: 270px; }
   .prices__service, .prices__name, .prices__price {
     position: relative; }
   .prices__service, .prices__name {
@@ -1052,7 +1052,7 @@ body {
   right: 0;
   top: 0;
   height: 100vh;
-  z-index: 5;
+  z-index: 6;
   padding: 24px 16px 75px 16px; }
   .feedback .form__title,
   .order-call .form__title {
@@ -1154,9 +1154,12 @@ body {
   height: 100%;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  z-index: 4;
+  z-index: 5;
   -webkit-filter: grayscale(80%);
           filter: grayscale(80%); }
+
+.blur-aside {
+  z-index: 3; }
 
 
 /*# sourceMappingURL=style.css.map*/
